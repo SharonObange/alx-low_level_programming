@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * Program to use puts instead of printf
+ * main - entry point for the program
+ * return - will return successfully
  */
 int main(void)
 {
