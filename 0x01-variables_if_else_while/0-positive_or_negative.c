@@ -1,12 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*Assign random value to n,check negativity or positivity
- *
- *main - Entry point
- *
- *Return : Always 0 (Success)
-*/
+/**
+ * main - Prints number and check positivity and negativity
+ * Return : 0 (Success), 1(Fail)
+ */
 int main(void)
 {
 	int n;
