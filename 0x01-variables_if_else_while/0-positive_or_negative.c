@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * main - Prints number and check positivity and negativity
- * Return : 0 (Success), 1(Fail)
+ * Return: 0 (Success), 1(Fail)
  */
 int main(void)
 {
