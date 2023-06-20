@@ -5,10 +5,11 @@
  * Return: 0(Succes), 1(Faliure)
 */
 
-int main(void){
+int main(void)
+{
 	char alphabet;
-	for (alphabet = 'a'; alphabet <= 'z'; alphabet ++)
-	{
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+       	{
 		putchar(alphabet);
 
 	}
