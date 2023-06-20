@@ -4,7 +4,7 @@
 
 /**
  * main - Print the last digit of n
- * Return : Always 0 (Success), 1 (Failure)
+ * Return: Always 0 (Success), 1 (Failure)
  */
 
 int main(void)
