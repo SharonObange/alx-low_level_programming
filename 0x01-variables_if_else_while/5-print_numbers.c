@@ -5,7 +5,7 @@
  * Return: Always 0
 */
 
-int main(vid)
+int main(void)
 {
 	int x;
 
