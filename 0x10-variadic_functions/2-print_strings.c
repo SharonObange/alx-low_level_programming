@@ -5,7 +5,7 @@
 /**
  *print_strings - prints an array of characters as a string
  *@separator: a constant character array
- *n: number of characters in the array
+ *@n: number of characters in the array
  *@...: other arguments
  */
 
