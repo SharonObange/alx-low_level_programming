@@ -12,35 +12,35 @@
 
 char *argstostr(int ac, char **av)
 {
-	size_t total_length = 0;
-	int i;
+	size_t length = 0;
+	int x;
 	char *result;
 	size_t current_index = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (x = 0; x < ac; x++)
 	{
-		total_length += strlen(av[i]);
+		length += strlen(av[x]);
 	}
-	total_length += ac;
-	result = malloc(total_length + 1);
+	length += ac;
+	result = malloc(length + 1);
 
 	if (result == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (x = 0; x < ac; x++)
 	{
-		size_t arg_len = strlen(av[i]);
+		size_t arg_len = strlen(av[x]);
 
-		memcpy(result + current_index, av[i], arg_len);
+		memcpy(result + current_index, av[x], arg_len);
 		current_index += arg_len;
 		result[current_index] = '\n';
 		current_index++;
 	}
 
-	result[total_length] = '\0';
+	result[length] = '\0';
 
 	return (result);
 }
