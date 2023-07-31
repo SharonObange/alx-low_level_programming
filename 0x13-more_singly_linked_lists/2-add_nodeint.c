@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- *add_node - adds a new node at the beginning of a linked list
+ *add_nodeint - adds a new node at the beginning of a linked list
  *@head: pointer to the head of a linked list
  *@n: integer value for the new node
  *Return: the address of the new element, NULL if failed
