@@ -6,7 +6,6 @@
  *@index: index of the bit to get
  *Return: the value of the bit at index or -1 if failed
  */
-
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int bit_size = sizeof(unsigned long int) * 8;
