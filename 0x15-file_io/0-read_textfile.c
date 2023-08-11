@@ -26,6 +26,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buffer = malloc(sizeof(char) * (letters + 1));
 	num_of_char_read = fread(buffer, sizeof(char), letters, read_file);
+
+	if (num_of_char_read <= 0)
+	{
+		fclose(read_file);
+		free(buffer);
+		return (0);
+	}
 	buffer[num_of_char_read] = '\0';
 	num_of_char_written = fwrite(buffer, sizeof(char), num_of_char_read, stdout);
 
