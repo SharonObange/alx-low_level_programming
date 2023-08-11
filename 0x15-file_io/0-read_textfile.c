@@ -29,6 +29,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer[num_of_char_read] = '\0';
 	num_of_char_written = fwrite(buffer, sizeof(char), num_of_char_read, stdout);
 
+	if (num_of_char_written != num_of_char_read)
+	{
+		fclose(read_file);
+		free(buffer);
+		return (0);
+	}
+
 	fclose(read_file);
 	free(buffer);
 
