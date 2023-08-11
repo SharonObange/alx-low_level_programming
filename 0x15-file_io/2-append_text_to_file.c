@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
-
-
-
-  */
+*append_text_to_file -  appends text to file
+*@filename: file to be appended to
+*@text_content: text to use to append
+*Return: 1 on success, -1 on failure
+*/
 
 int append_text_to_file(const char *filename, char *text_content)
 {
@@ -38,6 +39,6 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	
+
 	return (1);
 }
