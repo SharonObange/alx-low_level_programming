@@ -12,14 +12,14 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int file;
+	int filename;
 	size_t text_len = 0;
 	ssize_t text;
 
 	if (filename == NULL)
 		return (-1);
 
-	file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	filename = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 
 	if (text_content != NULL)
 	{
