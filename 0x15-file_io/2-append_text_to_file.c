@@ -1,3 +1,5 @@
+#include <fcntl.h>
+#include <unistd.h>
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -10,30 +12,30 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	FILE *file;
-	size_t append_text;
-	size_t text_len = 0;
+	int file;
+	int append_text;
+	int text_len = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	file = fopen(filename, "a");
+	file = open(filename, O_WRONLY | O_APPEND);
 
-	if (file == NULL)
+	if (file == -1)
 		return (-1);
 
 	if (text_content == NULL)
 	{
-		fclose(file);
+		close(file);
 		return (1);
 	}
 
 	while (text_content[text_len] != '\0')
 		text_len++;
 
-	append_text = fwrite(text_content, sizeof(char), text_len, file);
+	append_text = write(file, text_content, text_len);
 
-	fclose(file);
+	close(file);
 
 	if (append_text != text_len)
 	{
